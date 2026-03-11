@@ -599,7 +599,7 @@ section {
     }
 
     .divider {
-        width: 300px;
+        width: 220px;
         height: 3px;
         background: linear-gradient(90deg, var(--hover_button_contact), var(--hover_button_work));
         border-radius: 2px;
