@@ -12,6 +12,10 @@ const contactBtn = document.getElementById('contact-btn');
 const myWorkSection = document.getElementById('mywork-section');
 const contactSection = document.getElementById('contact-section');
 const backButtons = document.querySelectorAll('.back-home-btn');
+if (window.innerWidth < 1238) {
+    document.getElementById("profile-pic").src = "picture/ii2.jpg"
+}
+
 
 function checkAndResize() {
     if (window.innerWidth < 1238) {
@@ -77,3 +81,19 @@ console.log(contaner_imge);
 
 
 
+    
+
+
+light.addEventListener('click',()=>{
+    document.body.classList.toggle("light-mode")
+    contaner_imge.classList.toggle("containerimg")
+    contaner_imge.classList.toggle("imagelight")
+    
+    if (document.body.classList.contains("light-mode") || window.innerWidth < 1238){
+        image.src="picture/ii2.jpg"
+    }
+    else{
+        image.src="picture/lll.jpg"
+    }
+
+});
