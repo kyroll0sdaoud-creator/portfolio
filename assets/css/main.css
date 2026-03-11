@@ -597,6 +597,19 @@ section {
         animation-delay: 0.5s;
         animation-fill-mode: both;
     }
+
+    .divider {
+        width: 300px;
+        height: 3px;
+        background: linear-gradient(90deg, var(--hover_button_contact), var(--hover_button_work));
+        border-radius: 2px;
+        margin: 1rem auto 0;
+        animation-name: fadeInSlide;
+        animation-duration: 1.2s;
+        animation-timing-function: ease-out;
+        animation-delay: 0.5s;
+        animation-fill-mode: both;
+    }
 }
 
 
@@ -681,7 +694,8 @@ section {
         animation-delay: 0.5s;
         animation-fill-mode: both;
     }
-        #T3-logo {
+
+    #T3-logo {
         display: none;
 
     }
@@ -717,7 +731,7 @@ section {
     }
 
     .containerimg {
-        
+
         width: 100%;
         height: auto;
         aspect-ratio: 1 / 1.2;
