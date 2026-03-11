@@ -740,4 +740,21 @@ section {
         display: none;
 
     }
+
+    .containerimg {
+        position: relative;
+        top: 150px;
+        width: 250px;
+        height: 250px;
+        overflow: hidden;
+        border-radius: 50%;
+        transition: border-radius 0.5s ease;
+        margin: 0 auto;
+        box-shadow: 2px 2px 4px whitesmoke, -2px -2px 4px whitesmoke;
+        animation-name: fadeInSlide;
+        animation-duration: 1.2s;
+        animation-timing-function: ease-out;
+        animation-delay: 0.5s;
+        animation-fill-mode: both;
+    }
 }
