@@ -610,6 +610,16 @@ section {
         animation-delay: 0.5s;
         animation-fill-mode: both;
     }
+
+    
+#openOverlay {
+        position: fixed;
+        top: 30px;
+        right: 20px;
+        z-index: 1001;
+        display: block !important;
+    }
+
 }
 
 
@@ -699,6 +709,14 @@ section {
         display: none;
 
     }
+    #openOverlay {
+        position: fixed;
+        top: 30px;
+        right: 20px;
+        z-index: 1001;
+        display: block !important;
+    }
+
 
 }
 
@@ -777,4 +795,74 @@ section {
         animation-delay: 0.5s;
         animation-fill-mode: both;
     }
+
+    #openOverlay {
+        position: fixed;
+        top: 30px;
+        right: 20px;
+        z-index: 1001;
+        display: block !important;
+    }
+
+}
+
+
+
+.hamburger-btn {
+    background: none;
+    border: none;
+    color: var(--font_color);
+    font-size: 23px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: block;
+    transition: 0.3s;
+    position: absolute;
+    margin-left:20px ;
+}
+
+.hamburger-btn:hover {
+    color: var(--hover_button_work);
+    transform: scale(1.1);
+}
+
+.full-screen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background-color: var(--body_backg);
+    z-index: 10000;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-links a {
+    font-family: "Marcellus", serif;
+    font-size: 50px;
+    color: var(--font_color);
+    text-decoration: none;
+    margin: 20px 0;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay-links a:hover {
+    color: var(--hover_button_work);
+}
+
+.close-overlay {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 60px;
+    background: none;
+    border: none;
+    color: var(--font_color);
+    cursor: pointer;
 }
