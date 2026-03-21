@@ -101,7 +101,7 @@ console.log(contaner_imge);
 
 
 
-    
+
 
 
 light.addEventListener('click',()=>{
@@ -117,7 +117,6 @@ light.addEventListener('click',()=>{
     }
 
 });
-
 
 
 
