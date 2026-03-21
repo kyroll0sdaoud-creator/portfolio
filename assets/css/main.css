@@ -306,7 +306,7 @@ ul {
     color: var(--font_color);
 }
 
-.container-links {
+.containelinks {
     position: relative;
     overflow: hidden;
 }
@@ -369,11 +369,10 @@ ul {
     font-family: "DM Sans", sans-serif;
     font-size: 14px;
 }
-
-.about_p_h {
+.about_p_h{
     position: relative;
     top: 10px;
-
+    
 }
 
 .overlay-buttons a {
@@ -394,7 +393,6 @@ ul {
     overflow: hidden;
     position: relative;
 }
-
 .overlay-buttons i {
     opacity: 0;
     width: 0;
@@ -403,12 +401,10 @@ ul {
     transform: translateX(20px);
     transition: all 0.3s ease;
 }
-
 .btn-demo:hover i {
     opacity: 1;
     transform: translateX(0);
 }
-
 .btn-demo:hover span {
     display: none;
 }
@@ -417,7 +413,6 @@ ul {
     opacity: 1;
     transform: translateX(0);
 }
-
 .btn-code:hover span {
     display: none;
 }
