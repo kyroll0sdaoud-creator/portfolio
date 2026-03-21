@@ -127,3 +127,24 @@ closeBtn.onclick = () => {
 document.querySelectorAll('.overlay-links a').forEach(link => {
     link.onclick = () => { overlay.style.height = "0%"; };
 });
+
+
+
+const goldElements = document.querySelectorAll(".animate-gold");
+
+function goldScroll() {
+    const trigger = window.innerHeight - 100;
+
+    goldElements.forEach((el, index) => {
+        const position = el.getBoundingClientRect().top;
+
+        if (position < trigger) {
+            setTimeout(() => {
+                el.classList.add("show");
+            }, index * 120); // ← stagger effect
+        }
+    });
+}
+
+window.addEventListener("scroll", goldScroll);
+window.addEventListener("load", goldScroll);

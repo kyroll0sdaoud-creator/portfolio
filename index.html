@@ -58,10 +58,10 @@
         <div class="full-screen-overlay" id="menuOverlay">
             <button class="close-overlay" id="closeOverlay">&times;</button>
             <div class="overlay-links">
-                <a id="home-nav-link" href="#home">Home</a>
-                <a id="work-nav-link" href="#mywork-section">Portfolio</a>
-                <a id="about-nav-link" href="#contact-section">About</a>
-                <a id="contact-nav-link" href="#contact-section">Contact</a>
+                <a id="home-nav-link" href="#">Home</a>
+                <a id="work-nav-link" href="#">Portfolio</a>
+                <a id="about-nav-link" href="#">About</a>
+                <a id="contact-nav-link" href="#">Contact</a>
             </div>
         </div>
 
@@ -166,15 +166,74 @@
     </section>
 
     <section id="about-section" class="hidden-section">
-        <header class="page-header">
-            <h1>About Me</h1>
-            <div class="divider"></div>
-        </header>
-        <button id="home" class="back-home-btn">
-            <i class="bi bi-house"></i>
-        </button>
-    </section>
 
+        <div class="container_about_section">
+
+            <!-- About -->
+            <div class="about_me-inside">
+                <h2>About Me</h2>
+                <p>
+                    I’m a Front-End Developer passionate about building modern interfaces
+                    using React TypeScript and UI/UX principles.
+                </p>
+            </div>
+
+            <!-- Skills -->
+            <div class="skills">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">React.js</div>
+                    <div class="skill-card">Node.js</div>
+                    <div class="skill-card">TypeScript</div>
+                    <div class="skill-card">JavaScript</div>
+                    <div class="skill-card">Express.js</div>
+                    <div class="skill-card">Problem Solving</div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="education">
+                <h2>Education & Training</h2>
+
+                <div class="timeline">
+                    <div class="item">
+                        <h3>Arap Open University</h3>
+                        <p>Computer Science — Graduation: 2028</p>
+                    </div>
+
+                    <div class="item">
+                        <h3>DEPI — React Web Development</h3>
+                        <p>120h training from basics to advanced React</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div class="services">
+                <h2>My Services</h2>
+
+                <div class="service-box">
+                    <h3>Front-End Development</h3>
+                    <p>Build fast, responsive, and modern web interfaces using React and TypeScript.</p>
+                </div>
+                <div class="service-box">
+                    <h3>UI/UX Design & Improvements</h3>
+                    <p>Enhance user experience and refine visual design using clean and modern principles.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Bug Fixing & Code Refactoring</h3>
+                    <p>Fix issues, clean code structure, and improve maintainability following best practices.</p>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <button id="home" class="back-home-btn">
+                <i class="bi bi-house"></i>
+            </button>
+
+        </div>
+
+    </section>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script src="assets/js/main.js"></script>
