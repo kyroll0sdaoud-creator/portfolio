@@ -18,21 +18,22 @@ const contact_nav = document.getElementById('contact-nav-link');
 const home_nav = document.getElementById('home-nav-link');
 
 
-if (window.innerWidth < 1238) {
-    document.getElementById("profile-pic").src = "picture/ii2.jpg"
+function updateProfileImage() {
+    const image = document.getElementById("profile-pic");
+    if (!image) return;
 
-
+    if (window.innerWidth < 1238 || document.body.classList.contains("light-mode")) {
+        image.src = "picture/ii2.jpg";
+    } else {
+        image.src = "picture/lll.jpg";
+    }
 }
 
+updateProfileImage();
 
 
 function checkAndResize() {
-    if (window.innerWidth < 1238) {
-        document.getElementById("profile-pic").src = "picture/ii2.jpg"
-    } else {
-        document.getElementById("profile-pic").src = "picture/lll.jpg"
-    }
-
+    updateProfileImage();
 }
 window.addEventListener('resize', checkAndResize);
 
@@ -109,12 +110,7 @@ light.addEventListener('click',()=>{
     contaner_imge.classList.toggle("containerimg")
     contaner_imge.classList.toggle("imagelight")
     
-    if (document.body.classList.contains("light-mode") || window.innerWidth < 1238){
-        image.src="picture/ii2.jpg"
-    }
-    else{
-        image.src="picture/lll.jpg"
-    }
+updateProfileImage();
 
 });
 
