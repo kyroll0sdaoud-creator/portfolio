@@ -66,7 +66,7 @@ function goHome() {
         sec.classList.remove('active-section');
     });
 
-    homeSection.style.display = 'flex'; // مهم عشان هو flex أصلاً
+    homeSection.style.display = 'flex'; 
 
     document.body.style.overflow =
         window.innerWidth > 768 ? 'hidden' : 'auto';
