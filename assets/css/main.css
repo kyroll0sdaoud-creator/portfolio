@@ -1069,56 +1069,76 @@ ul {
     color: var(--font_color);
     cursor: pointer;
 }
-
-/*-----------About---------------*/
-
-/* Smooth Animation for Section Entrance */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(25px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Main Container */
+/* ===== Container About Section ===== */
 .container_about_section {
-    padding: 70px 0;
     width: 90%;
     margin: auto;
+    padding: 50px 30px;
+    border-radius: 20px;
+    animation: fadeInUp 0.8s ease;
+    background: linear-gradient(-45deg, #0d0d0d, #111, #222, #111);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
     color: var(--about-text-color);
-    animation: fadeInUp .8s ease;
 }
 
-/* ========== About Me ========== */
-.about_me-inside h2 {
+/* ===== About Cards ===== */
+.about-me-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    padding: 20px 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeInUp 0.8s forwards;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-me-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.35);
+}
+
+/* ===== Stagger Animations ===== */
+.about-me-card:nth-child(1){ animation-delay: 0.2s; }
+.about-me-card:nth-child(2){ animation-delay: 0.4s; }
+.about-me-card:nth-child(3){ animation-delay: 0.6s; }
+.about-me-card:nth-child(4){ animation-delay: 0.8s; }
+
+/* ===== About Headings ===== */
+.about_me-inside h2,
+.skills h2,
+.education h2,
+.services h2 {
     font-family: "Marcellus", serif;
     font-size: var(--about-heading-size);
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     letter-spacing: 1px;
+    background: linear-gradient(90deg, var(--font_color), var(--hover_button_work));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.25);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
 }
 
+/* ===== Paragraphs ===== */
 .about_me-inside p {
+    font-family: "DM Sans", sans-serif;
     font-size: 18px;
-    opacity: var(--about-paragraph-opacity);
-    line-height: 1.7;
-    max-width: 750px;
-    padding-left: 5px;
+    line-height: 1.85;
+    letter-spacing: 0.5px;
+    color: var(--about-text-color);
+    text-shadow: 0px 1px 5px rgba(0,0,0,0.25);
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeInUp 1s forwards;
 }
 
-
-
-/* ========== Skills Grid ========== */
-.skills h2 {
-    font-family: "Marcellus", serif;
-    font-size: var(--about-heading-size);
-    margin: 50px 0 25px;
-}
-
+/* ===== Skills Section ===== */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -1132,91 +1152,102 @@ ul {
     border-radius: 10px;
     font-size: 17px;
     text-align: center;
-    transition: .35s;
-    box-shadow: 0px 0px 8px transparent;
+    transition: transform 0.35s, box-shadow 0.35s;
 }
 
 .skill-card:hover {
-    border-color: var(--about-card-border-hover);
-    transform: translateY(-5px);
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    transform: translateY(-7px) scale(1.02);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.3);
 }
 
-
-
-/* ========== Education Timeline ========== */
-.education h2 {
-    font-family: "Marcellus", serif;
-    font-size: var(--about-heading-size);
-    margin: 55px 0 30px;
-}
-
+/* ===== Timeline / Education ===== */
 .timeline {
-    border-left: 2px solid var(--timeline-border);
-    padding-left: 30px;
+    border-left: 3px solid var(--timeline-border);
+    padding-left: 50px;
     position: relative;
+    margin-left: 10px;
 }
 
 .timeline .item {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
     position: relative;
+    padding-left: 20px;
 }
 
 .timeline .item::before {
     content: "";
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
     background: var(--timeline-border);
     border-radius: 50%;
     position: absolute;
-    left: -36px;
-    top: 6px;
+    left: -8px;
+    top: 5px;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.timeline .item h3 {
-    font-family: "Marcellus", serif;
-    font-size: var(--about-subheading-size);
-    margin-bottom: 8px;
-    font-weight: 600;
+.timeline .item:hover::before {
+    transform: scale(1.5);
+    background: var(--hover_button_work);
 }
 
-.timeline .item p {
-    font-size: 16px;
-    opacity: var(--timeline-text-opacity);
+.timeline .item .timeline-card {
+    background: var(--about-card-bg);
+    border: 1px solid var(--about-card-border);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.35s, box-shadow 0.35s;
 }
 
-
-
-/* ========== Services Section ========== */
-.services h2 {
-    font-family: "Marcellus", serif;
-    font-size: var(--about-heading-size);
-    margin: 55px 0 25px;
+.timeline .item .timeline-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.3);
 }
 
+/* ===== Services Section ===== */
 .service-box {
     background: var(--about-card-bg);
     border: 1px solid var(--about-card-border);
     padding: 25px;
     border-radius: 14px;
     margin-bottom: 25px;
-    transition: .35s ease;
-    box-shadow: 0px 0px 10px transparent;
-}
-
-.service-box h3 {
-    font-family: "Marcellus", serif;
-    font-size: var(--about-subheading-size);
-    margin-bottom: 10px;
-}
-
-.service-box p {
-    opacity: .78;
-    line-height: 1.6;
+    text-align: center;
+    transition: transform 0.35s, box-shadow 0.35s;
 }
 
 .service-box:hover {
-    border-color: var(--services-border-hover);
-    transform: translateY(-6px);
-    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.25);
+    transform: translateY(-7px) scale(1.02);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientBG {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* ===== Light Mode ===== */
+.light-mode .container_about_section {
+    background: linear-gradient(145deg, rgba(255,255,255,0.25), rgba(255,255,255,0.15));
+}
+
+.light-mode .about-me-card,
+.light-mode .skill-card,
+.light-mode .timeline-card,
+.light-mode .service-box {
+    background: rgba(255,255,255,0.5);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
