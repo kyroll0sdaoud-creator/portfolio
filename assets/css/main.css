@@ -8,7 +8,7 @@
     --font_color: whitesmoke;
     --font_colorbtn: #fff;
     --anc: white;
-    --anchover: #00d4ff;
+    --anchover: #0A66C2;
     --bgcolor_con_btn: rgb(0, 0, .1);
 
 
@@ -194,9 +194,6 @@ body::-webkit-scrollbar {
 }
 
 
-
-
-
 #contact-btn {
     position: relative;
     left: 15px;
@@ -214,10 +211,9 @@ body::-webkit-scrollbar {
     color: var(--hover_button_contact);
     transform: scale(1.2);
     box-shadow: none;
-
-
-
 }
+
+
 
 #mywork-btn:hover {
     color: var(--hover_button_work);
@@ -253,6 +249,7 @@ body::-webkit-scrollbar {
 
 #ld:hover {
     transform: scale(1.2);
+    transform: rotate(180deg) scale(1.2);
 
 }
 
@@ -355,6 +352,7 @@ ul {
     transition: 0.4s ease;
     box-shadow: 0px 0px 10px #000;
     color: var(--font_color);
+
 }
 
 .containelinks {
@@ -574,11 +572,12 @@ ul {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid transparent;
 }
+
 .contact-item:hover {
     transform: translateX(8px) scale(1.02);
-    background: rgba(255,255,255,0.07);
+    background: rgba(255, 255, 255, 0.07);
     border: 1px solid var(--hover_button_work);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -586,12 +585,14 @@ ul {
 .contact-item i {
     font-size: 22px;
     color: var(--hover_button_contact);
-        transition: 0.3s;
+    transition: 0.3s;
 }
+
 .contact-item:hover i {
     transform: scale(1.2) rotate(5deg);
     color: var(--hover_button_work);
 }
+
 /* Text inside each item */
 .contact-item h3 {
     font-family: "Marcellus", serif;
@@ -612,6 +613,7 @@ ul {
     background: rgba(255, 255, 255, 0.05);
     transform: translateX(5px);
 }
+
 .contact-item {
     position: relative;
     overflow: hidden;
@@ -767,7 +769,7 @@ ul {
         animation-delay: 0.5s;
         animation-fill-mode: both;
     }
-    
+
 
     .divider {
         width: 220px;
@@ -1328,7 +1330,7 @@ ul {
 
 
 .hidden-section {
-    padding-top: 50px;  
+    padding-top: 50px;
     padding-bottom: 50px;
 
 }
