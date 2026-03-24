@@ -736,7 +736,7 @@ ul {
     .back-home-btn {
 
         position: fixed;
-        left: 6%;
+        left: 1%;
         top: 5px;
         z-index: 9999;
         gap: 8px;
@@ -788,7 +788,7 @@ ul {
     #openOverlay {
         position: fixed;
         top: 30px;
-        right: 20px;
+        right: 10px;
         z-index: 1001;
         display: block !important;
     }
