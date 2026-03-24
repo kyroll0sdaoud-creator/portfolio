@@ -529,20 +529,6 @@ ul {
 
 
 
-#contact-form {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #111;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.light-mode #contact-form {
-    background: #ffffff;
-    border: 1px solid #ddd;
-}
-
 
 
 
@@ -550,33 +536,19 @@ ul {
     max-width: 600px;
     margin: 40px auto;
     padding: 25px 20px;
-    background: #111;
+    background: var(--body_backg);
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-
+.contact-box a{
+    background-color: var(--about-card-bg);
+}
 .light-mode .contact-box {
     background: #fff;
     border: 1px solid #ddd;
 }
 
-
-
-.contact-box {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 25px;
-    background: #111;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.light-mode .contact-box {
-    background: #fff;
-    border: 1px solid #ddd;
-}
 
 /* Each item is a clickable link */
 .contact-item {
@@ -800,7 +772,7 @@ ul {
 
 
     .divider {
-        width: 220px;
+        width: 50px;
         height: 3px;
         background: linear-gradient(90deg, var(--hover_button_contact), var(--hover_button_work));
         border-radius: 2px;
@@ -905,6 +877,17 @@ ul {
     position: relative;
     top: 2px;
 }
+
+
+.contact-box {
+    max-width: 90%;
+    margin: 40px auto;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+
 
 
 }
@@ -1201,13 +1184,14 @@ ul {
     font-size: var(--about-heading-size);
     margin-bottom: 25px;
     letter-spacing: 1px;
-    background: linear-gradient(90deg, var(--font_color), var(--hover_button_work));
+    background: linear-gradient(90deg, var(--font_color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 0.8s forwards;
+    animation-delay: .9s;
 }
 
 /* ===== Paragraphs ===== */
@@ -1222,6 +1206,8 @@ ul {
     opacity: 0;
     transform: translateY(25px);
     animation: fadeInUp 1s forwards;
+    animation-delay: .9s;
+
 }
 
 /* ===== Skills Section ===== */
