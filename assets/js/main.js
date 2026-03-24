@@ -7,6 +7,11 @@ var typed = new Typed('#element', {
     loop: true,
 
 });
+
+// for nav
+const openBtn = document.getElementById('openOverlay');
+const closeBtn = document.getElementById('closeOverlay');
+const overlay = document.getElementById('menuOverlay');
 const myWorkBtn = document.getElementById('mywork-btn');
 const contactBtn = document.getElementById('contact-btn');
 const myWorkSection = document.getElementById('mywork-section');
@@ -23,11 +28,12 @@ function updateProfileImage() {
     const image = document.getElementById("profile-pic");
     if (!image) return;
 
-    if (window.innerWidth < 1238 || document.body.classList.contains("light-mode")) {
-        image.src = "picture/ii2.jpg";
-    } else {
-        image.src = "picture/lll.jpg";
-    }
+    const isSmall = window.innerWidth < 1238;
+    const isLight = document.body.classList.contains("light-mode");
+
+    image.src = (isSmall || isLight)
+        ? "picture/ii2.jpg"
+        : "picture/lll.jpg";
 }
 
 updateProfileImage();
@@ -56,7 +62,7 @@ function showAndLock(target) {
         if (window.innerWidth > 768) {
             document.body.style.overflow = 'hidden';
         }
-    }, 700); 
+    }, 800); 
 }
 
 function goHome() {
@@ -66,7 +72,7 @@ function goHome() {
         sec.classList.remove('active-section');
     });
 
-    homeSection.style.display = 'flex'; // مهم عشان هو flex أصلاً
+    homeSection.style.display = 'flex'; 
 
     document.body.style.overflow =
         window.innerWidth > 768 ? 'hidden' : 'auto';
@@ -111,10 +117,8 @@ updateProfileImage();
 
 
 
-// for nav
-const openBtn = document.getElementById('openOverlay');
-const closeBtn = document.getElementById('closeOverlay');
-const overlay = document.getElementById('menuOverlay');
+
+
 
 openBtn.onclick = () => {
     overlay.style.height = "100%";

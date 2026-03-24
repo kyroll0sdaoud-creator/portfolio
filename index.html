@@ -13,6 +13,20 @@
 </head>
 
 <body>
+    <button class="hamburger-btn" id="openOverlay">
+        <!-- <i class="fa-solid fa-bars"></i> -->
+        <i class="fa-solid fa-bars"></i>
+    </button>
+            <!-- this for hamburger -->
+        <div class="full-screen-overlay" id="menuOverlay">
+            <button class="close-overlay" id="closeOverlay">&times;</button>
+            <div class="overlay-links">
+                <a id="home-nav-link" href="#">Home</a>
+                <a id="about-nav-link" href="#">About</a>
+                <a id="work-nav-link" href="#">Portfolio</a>
+                <a id="contact-nav-link" href="#">Contact</a>
+            </div>
+        </div>
     <div class="hero-section">
         <div class="profile">
             <div id="conimg" class="containerimg">
@@ -22,10 +36,10 @@
         <div class="about">
             <h1 id="T1">Kerolos Daoud</h1>
             <h2 id="Iam">I am <span id="element"></span></h2>
-                <p id="p1"> Trainee at DEBI (Round 4, started Nov 28).I build fast,
-                    responsive, and user-focused web interfaces using React & TypeScript, and
-                    JavaScript.
-                </p>
+            <p id="p1"> Trainee at DEBI (Round 4, started Nov 28).I build fast,
+                responsive, and user-focused web interfaces using React & TypeScript, and
+                JavaScript.
+            </p>
             <div class="containerbuttons">
                 <div class="cv">
                     <button id="mywork-btn">My portfolio</button>
@@ -47,24 +61,12 @@
                             class="fa-brands fa-linkedin"></i></a></li>
                 <li><a href="https://wa.me/201210068591" target="_blank"><i class="fa-brands fa-whatsapp"></i></a> </li>
             </ul>
-            <button class="hamburger-btn" id="openOverlay">
-                <!-- <i class="fa-solid fa-bars"></i> -->
-                <i class="fa-solid fa-bars"></i>
-            </button>
+
             <button id="ld"><i id="i1" class="fa-solid fa-circle-half-stroke"></i></button>
             <!-- <button id="ld"><i id="i1" class="bi bi-brightness-low-fill"></i></button> -->
         </div>
 
-        <!-- this for hamburger -->
-        <div class="full-screen-overlay" id="menuOverlay">
-            <button class="close-overlay" id="closeOverlay">&times;</button>
-            <div class="overlay-links">
-                <a id="home-nav-link" href="#">Home</a>
-                <a id="work-nav-link" href="#">Portfolio</a>
-                <a id="about-nav-link" href="#">About</a>
-                <a id="contact-nav-link" href="#">Contact</a>
-            </div>
-        </div>
+
 
 
     </div>
@@ -231,7 +233,6 @@
             <button id="home" class="back-home-btn">
                 <i class="bi bi-house"></i>
             </button>
-
         </div>
 
     </section>

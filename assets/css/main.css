@@ -84,6 +84,7 @@ body::-webkit-scrollbar {
     height: 100vh;
 }
 
+
 .profile {
     width: 45%;
     /* border: 1px solid whitesmoke; */
@@ -259,6 +260,10 @@ body::-webkit-scrollbar {
 }
 
 
+#anc{
+    position: relative;
+    top: 50px;
+}
 
 #anc a {
     color: var(--anc);
@@ -376,6 +381,28 @@ ul {
     transition: all 0.4s ease;
     transform: translateY(20px);
 }
+
+#openOverlay {
+        position: fixed;
+        top: 70px;
+        right: 27px;
+        z-index: 1001;
+        display: block !important;
+    }
+
+
+.hamburger-btn {
+    background: none;
+    border: none;
+    color: var(--font_color);
+    font-size: 23px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: block;
+    transition: 0.3s;
+    margin-left: 20px;
+}
+
 
 .project-card:hover .overlay-buttons {
     opacity: 1;
@@ -707,6 +734,7 @@ ul {
         box-shadow: none;
 
     }
+    
 
     #links {
         width: 100%;
@@ -873,6 +901,10 @@ ul {
         text-align: center;
     }
 
+#anc{
+    position: relative;
+    top: 2px;
+}
 
 
 }
@@ -967,7 +999,7 @@ ul {
 
     #openOverlay {
         position: fixed;
-        top: 30px;
+        top: 6px;
         right: 20px;
         z-index: 1001;
         display: block !important;
@@ -1063,19 +1095,6 @@ ul {
 }
 
 
-
-.hamburger-btn {
-    background: none;
-    border: none;
-    color: var(--font_color);
-    font-size: 23px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    display: block;
-    transition: 0.3s;
-    position: absolute;
-    margin-left: 20px;
-}
 
 .hamburger-btn:hover {
     color: var(--hover_button_work);
