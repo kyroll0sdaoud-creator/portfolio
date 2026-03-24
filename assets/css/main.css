@@ -231,12 +231,10 @@ body::-webkit-scrollbar {
     text-decoration: none;
 }
 
-
-
 #ld {
-    /* position: fixed;
+    position: fixed;
     bottom: 10px;
-    right: 30px; */
+    right: 30px;
     background: none;
     border: none;
     padding: 0;
@@ -790,7 +788,7 @@ ul {
     #openOverlay {
         position: fixed;
         top: 30px;
-        right: 19px;
+        right: 20px;
         z-index: 1001;
         display: block !important;
     }
@@ -891,17 +889,8 @@ ul {
 
 
 
-#p_and_h_top{
-        position: fixed;
-        top: 70px;
-        display: block !important;
-}
 
 }
-
-
-
-
 
 
 @media (min-width:580px) and (max-width:1000px) {
@@ -998,6 +987,7 @@ ul {
         z-index: 1001;
         display: block !important;
     }
+
 
 }
 
@@ -1350,10 +1340,9 @@ ul {
 
 }
 
-#p_and_h_top{
+/* #p_and_h_top{
         position: fixed;
-        bottom: 20px;
-        right: 25px;
+        top: 70px;
         z-index: 1001;
         display: block !important;
-}
+} */
