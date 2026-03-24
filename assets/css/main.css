@@ -790,7 +790,7 @@ ul {
     #openOverlay {
         position: fixed;
         top: 30px;
-        right: 20px;
+        right: 19px;
         z-index: 1001;
         display: block !important;
     }
