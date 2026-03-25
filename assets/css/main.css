@@ -775,7 +775,7 @@ ul {
 
     .back-home-btn {
         position: absolute;
-        top: 75px;
+        top: 80px;
         right: 20px;
         width: 40px;
         height: 40px;
@@ -797,11 +797,9 @@ ul {
     }
 
     .back-home-btn:hover {
-        background-position: 100%;
-        transform: translateY(-4px) scale(1.05);
-        box-shadow: 0 6px 15px rgba(227, 159, 0, 0.6);
-        border-radius: 50%;
-        box-sizing: border-box;
+        transform: translateY(-5px);
+        background-color: #7a4e0a;
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
     }
 
     .containerimg {
@@ -855,6 +853,8 @@ ul {
         padding-top: 25px !important;
         padding-bottom: 30px !important;
     }
+
+
 
     /* ===== Titles ===== */
     .about_me-inside h2,
@@ -945,7 +945,7 @@ ul {
 
     #ld {
         position: relative;
-        bottom: 19px;
+        bottom: 21px;
         right: 2px;
     }
 
@@ -1197,6 +1197,13 @@ ul {
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
     color: var(--about-text-color);
+}
+
+@media (max-width:579px) {
+    .container_about_section {
+        background: none;
+    }
+
 }
 
 /* ===== About Cards ===== */
