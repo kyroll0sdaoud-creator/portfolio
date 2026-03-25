@@ -101,6 +101,7 @@ body::-webkit-scrollbar {
 
 #links {
     width: 5%;
+    position: relative;
 }
 
 .imagelight {
@@ -260,9 +261,8 @@ body::-webkit-scrollbar {
 }
 
 
-#anc{
+#anc {
     position: relative;
-    top: 50px;
 }
 
 #anc a {
@@ -295,6 +295,7 @@ ul {
 #p1 {
     font-family: "DM Sans", sans-serif;
 }
+
 
 .hidden-section {
     position: relative;
@@ -332,9 +333,13 @@ ul {
     margin: 1rem auto 0;
 }
 
+
 .page-header {
     font-family: "Marcellus", serif;
     text-align: center;
+    position: -webkit-sticky;
+    position: relative;
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
 }
 
 .projects-container {
@@ -357,6 +362,7 @@ ul {
     transition: 0.4s ease;
     box-shadow: 0px 0px 10px #000;
     color: var(--font_color);
+    text-align: center;
 
 }
 
@@ -383,12 +389,9 @@ ul {
 }
 
 #openOverlay {
-        position: fixed;
-        top: 70px;
-        right: 27px;
-        z-index: 1001;
-        display: block !important;
-    }
+    position: absolute;
+    right: 5;
+}
 
 
 .hamburger-btn {
@@ -403,6 +406,13 @@ ul {
     margin-left: 20px;
 }
 
+
+/* ---for hum-btn section */
+.open-menu-btn {
+    position: relative;
+    bottom: 50px;
+
+}
 
 .project-card:hover .overlay-buttons {
     opacity: 1;
@@ -541,9 +551,10 @@ ul {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-.contact-box a{
+.contact-box a {
     background-color: var(--about-card-bg);
 }
+
 .light-mode .contact-box {
     background: #fff;
     border: 1px solid #ddd;
@@ -666,7 +677,38 @@ ul {
 
 }
 
+#about-section .back-home-btn {
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--about-card-border);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    padding: 0;
+}
 
+#about-section .back-home-btn:hover {
+    transform: translateY(-5px);
+    background-color: #7a4e0a;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+#about-section .back-home-btn i {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
 
 
 @media (max-width:579px) {
@@ -706,7 +748,7 @@ ul {
         box-shadow: none;
 
     }
-    
+
 
     #links {
         width: 100%;
@@ -715,7 +757,6 @@ ul {
         justify-content: center;
         align-items: flex-end;
         gap: 20px;
-        position: static;
         padding: 20px 0;
     }
 
@@ -734,15 +775,27 @@ ul {
     }
 
     .back-home-btn {
-
-        position: fixed;
-        left: 1%;
-        top: 5px;
-        z-index: 9999;
-        gap: 8px;
-        padding: 12px 15px;
+        position: absolute;
+        top: 75px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background: var(--about-card-border);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
         border: none;
-        background: none;
+        cursor: pointer;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        padding: 0;
+        margin: 0;
+        padding: 0;
+        line-height: 1;
     }
 
     .back-home-btn:hover {
@@ -786,11 +839,8 @@ ul {
 
 
     #openOverlay {
-        position: fixed;
-        top: 30px;
-        right: 10px;
-        z-index: 1001;
-        display: block !important;
+        position: relative;
+        top: 5px;
     }
 
 
@@ -873,20 +923,35 @@ ul {
         text-align: center;
     }
 
-#anc{
-    position: relative;
-    top: 2px;
-}
+    #anc {
+        position: relative;
+        top: 2px;
+    }
 
 
-.contact-box {
-    max-width: 90%;
-    margin: 40px auto;
-    padding: 25px 20px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-}
+    .contact-box {
+        max-width: 90%;
+        margin: 40px auto;
+        padding: 25px 20px;
+        border-radius: 12px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
 
+
+    #about-section .back-home-btn {
+        position: absolute;
+        left: 320px;
+        top: 0px;
+    }
+
+    #ld {
+        position: relative;
+        bottom: 19px;
+        right: 2px;
+
+
+
+    }
 
 }
 
@@ -938,7 +1003,7 @@ ul {
         justify-content: center;
         align-items: flex-end;
         gap: 20px;
-        position: static;
+        position: relative;
         padding: 20px 0;
     }
 
@@ -979,7 +1044,7 @@ ul {
     }
 
     #openOverlay {
-        position: fixed;
+        position: relative;
         top: 6px;
         right: 20px;
         z-index: 1001;
@@ -1066,7 +1131,7 @@ ul {
     }
 
     #openOverlay {
-        position: fixed;
+        position: relative;
         top: 30px;
         right: 20px;
         z-index: 1001;
@@ -1182,7 +1247,7 @@ ul {
     font-size: var(--about-heading-size);
     margin-bottom: 25px;
     letter-spacing: 1px;
-    background: linear-gradient(90deg, var(--hover_button_work),var(--hover_button_contact));
+    background: linear-gradient(90deg, var(--hover_button_work), var(--hover_button_contact));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);

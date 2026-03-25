@@ -116,7 +116,15 @@ updateProfileImage();
 });
 
 
+// بنجيب كل الزراير اللي واخدة الكلاس ده
+const allOpenButtons = document.querySelectorAll('.open-menu-btn');
 
+// بنعمل Loop عليهم كلهم عشان نشغلهم
+allOpenButtons.forEach(btn => {
+    btn.onclick = () => {
+        overlay.style.height = "100%";
+    };
+});
 
 
 
@@ -131,8 +139,6 @@ closeBtn.onclick = () => {
 document.querySelectorAll('.overlay-links a').forEach(link => {
     link.onclick = () => { overlay.style.height = "0%"; };
 });
-
-
 
 
 
