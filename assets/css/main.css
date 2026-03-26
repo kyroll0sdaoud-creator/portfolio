@@ -8,12 +8,16 @@
     --font_color: whitesmoke;
     --font_colorbtn: #fff;
     --anc: white;
-    --anchover: #0A66C2;
+    --anchover: #8a5609;
     --bgcolor_con_btn: rgb(0, 0, .1);
 
     --k-pr: #a86507;
     --k-sec: #F59E0B;
     --k-acc: #B45309;
+
+    --k-prima: #4a6285;
+    --k-second: #4b596f;
+    --k-a: #192339;
 
 
 
@@ -48,6 +52,10 @@
     --k-pr: #1F2937;
     --k-sec: #374151;
     --k-acc: #111827;
+
+    --k-prima: #1F2937;
+    --k-second: #374151;
+    --k-: #111827;
 
     --about-text-color: #111;
     --about-paragraph-opacity: 0.9;
@@ -1423,7 +1431,7 @@ ul {
 
 .professional-logo {
     position: relative;
-    top: 15px;
+    top: 20px;
     left: 17px;
     width: 40px;
     height: 40px;
@@ -1431,6 +1439,9 @@ ul {
     box-shadow: 0 4px 12px;
     transition: all 0.3s ease;
     cursor: pointer;
+    --k-primary: var(--k-prima);
+    --k-secondary: var(--k-second);
+    --k-accent: var(--k-a);
 }
 
 .professional-logo:hover {
@@ -1450,8 +1461,8 @@ ul {
 @media (max-width:579px) {
     .professional-logo {
         position: relative;
-        top: -15px;
-        left: -15px;
+        top: -16px;
+        left: -30px;
         width: 30px;
         height: 30px;
     }
