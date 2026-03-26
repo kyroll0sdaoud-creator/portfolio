@@ -11,6 +11,10 @@
     --anchover: #0A66C2;
     --bgcolor_con_btn: rgb(0, 0, .1);
 
+    --k-pr: #a86507;
+    --k-sec: #F59E0B;
+    --k-acc: #B45309;
+
 
 
     --about-text-color: white;
@@ -41,6 +45,9 @@
     --hover_button_contact: #7a4e0a;
     --bgcolor_con_btn: #ffffff;
 
+    --k-pr: #1F2937;
+    --k-sec: #374151;
+    --k-acc: #111827;
 
     --about-text-color: #111;
     --about-paragraph-opacity: 0.9;
@@ -263,6 +270,7 @@ body::-webkit-scrollbar {
 
 #anc {
     position: relative;
+    margin-top: 100px;
 }
 
 #anc a {
@@ -606,7 +614,7 @@ ul {
 /* Text inside each item */
 .contact-item h3 {
     font-family: "Marcellus", serif;
-    color: var(--hover_button_work);
+    color: var(--font_color);
     margin-bottom: 4px;
     font-size: 18px;
 }
@@ -1411,4 +1419,75 @@ ul {
         top: 70px;
         z-index: 1001;
         display: block !important;
+} */
+
+.professional-logo {
+    position: relative;
+    top: 15px;
+    left: 17px;
+    width: 40px;
+    height: 40px;
+    border-radius: 500%;
+    box-shadow: 0 4px 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.professional-logo:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    --k-primary: var(--k-pr);
+    --k-secondary: var(--k-sec);
+    --k-accent: var(--k-acc);
+}
+
+.professional-logo svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+@media (max-width:579px) {
+    .professional-logo {
+        position: relative;
+        top: -15px;
+        left: -15px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (min-width:580px) and (max-width:1000px) {
+    .professional-logo {
+        position: relative;
+        top: -15px;
+        left: -15px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* 
+.k-theme-dark {
+    --k-primary: #1F2937;
+    --k-secondary: #374151;
+    --k-accent: #111827;
+}
+
+.k-theme-blue {
+    --k-primary: #1E40AF;
+    --k-secondary: #3B82F6;
+    --k-accent: #1D4ED8;
+}
+
+.k-theme-gold {
+    --k-primary: #D97706;
+    --k-secondary: #F59E0B;
+    --k-accent: #B45309;
+}
+
+.k-theme-green {
+    --k-primary: #059669;
+    --k-secondary: #10B981;
+    --k-accent: #047857;
 } */
