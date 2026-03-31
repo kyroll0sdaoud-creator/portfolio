@@ -116,10 +116,8 @@ updateProfileImage();
 });
 
 
-// بنجيب كل الزراير اللي واخدة الكلاس ده
 const allOpenButtons = document.querySelectorAll('.open-menu-btn');
 
-// بنعمل Loop عليهم كلهم عشان نشغلهم
 allOpenButtons.forEach(btn => {
     btn.onclick = () => {
         overlay.style.height = "100%";
@@ -142,5 +140,3 @@ document.querySelectorAll('.overlay-links a').forEach(link => {
 
 
 
-window.addEventListener("scroll", goldScroll);
-window.addEventListener("load", goldScroll);
