@@ -1472,11 +1472,12 @@ ul {
 
 @media (max-width:579px) {
     .professional-logo {
-        position: relative;
+        /* position: relative;
         top: -16px;
         left: -30px;
         width: 30px;
-        height: 30px;
+        height: 30px; */
+        display: none;
     }
 }
 
