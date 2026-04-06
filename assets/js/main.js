@@ -23,18 +23,28 @@ const contact_nav = document.getElementById('contact-nav-link');
 const home_nav = document.getElementById('home-nav-link');
 const homeSection = document.querySelector('.hero-section');
 
+const image2=document.getElementsByClassName("img-project");
+console.log(image2);
+
 
 function updateProfileImage() {
     const image = document.getElementById("profile-pic");
     if (!image) return;
+    if(!image2) return;
 
     const isSmall = window.innerWidth < 1238;
     const isLight = document.body.classList.contains("light-mode");
 
     image.src = (isSmall || isLight)
-        ? "picture/ii2.jpg"
-        : "picture/lll.jpg";
-}
+        ? "picture/ii2.jpg" : "picture/lll.jpg";
+
+        for(i of image2){
+        i.src =(isSmall || isLight) 
+            ? "picture/Java Wallpaper, 37 Java Wallpaper, BFP.jpg" : "picture/download.webp";
+        }
+    }
+
+
 
 updateProfileImage();
 
