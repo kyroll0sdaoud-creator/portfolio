@@ -200,10 +200,12 @@ body::-webkit-scrollbar {
 }
 
 .containerbuttons button {
-   font-family: "Exo", sans-serif;
-    padding: 6px 14px; /* زودنا الراحة شوية */
+    font-family: "Exo", sans-serif;
+    padding: 6px 14px;
+    /* زودنا الراحة شوية */
     font-weight: 600;
-    border: 1px solid #1a1a1a; /* كان ناقص style */
+    border: 1px solid #1a1a1a;
+    /* كان ناقص style */
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
@@ -211,7 +213,8 @@ body::-webkit-scrollbar {
     text-transform: uppercase;
     background: transparent;
     color: #1a1a1a;
-    border-radius: 6px; /* لمسة ناعمة */
+    border-radius: 6px;
+    /* لمسة ناعمة */
 }
 
 
@@ -575,7 +578,10 @@ ul {
     padding: 25px 20px;
     background: var(--body_backg);
     border-radius: 12px;
+    border: 1px solid var(--about-card-border);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+
 }
 
 .contact-box a {
@@ -1279,7 +1285,8 @@ ul {
     letter-spacing: 1px;
     background: linear-gradient(90deg, var(--hover_button_work), var(--hover_button_contact));
     -webkit-background-clip: text;
-    background-clip: text; /* Standard property for compatibility */
+    background-clip: text;
+    /* Standard property for compatibility */
     -webkit-text-fill-color: transparent;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     opacity: 0;
@@ -1515,3 +1522,153 @@ ul {
     --k-secondary: #10B981;
     --k-accent: #047857;
 } */
+
+
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 15px;
+    background: var(--about-card-bg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.contact-form h2 {
+    margin-bottom: 25px;
+    font-family: "Marcellus", serif;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--about-card-border);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--font_color);
+    outline: none;
+    font-size: 14px;
+}
+
+.form-group label {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    color: #888;
+    font-size: 13px;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.form-group input:focus+label,
+.form-group textarea:focus+label,
+.form-group input:valid+label,
+.form-group textarea:valid+label {
+    top: -15px;
+    left: 8px;
+    font-size: 11px;
+    color: var(--hover_button_work);
+    background: var(--about-card-bg);
+    padding: 0 5px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    border: 1px solid var(--hover_button_work);
+    background: transparent;
+    color: var(--font_color);
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+
+
+.contact-form button:hover::before {
+    left: 100%;
+}
+
+.contact-form button:hover {
+    box-shadow: 0 0 15px var(--hover_button_work);
+    transform: scale(1.05);
+}
+
+
+
+.container_contact {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.contact-box,
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form textarea {
+    min-height: 140px;
+    resize: none;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--about-card-border);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--font_color);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--hover_button_work);
+    box-shadow: 0 0 10px rgba(239, 181, 73, 0.3);
+}
+
+.contact-form {
+    max-width: 500px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    backdrop-filter: blur(10px);
+}
+
+@media (max-width: 768px) {
+    .container_contact {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .contact-box,
+    .contact-form {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .contact-form h2 {
+        text-align: center;
+    }
+}

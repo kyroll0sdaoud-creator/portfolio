@@ -166,28 +166,47 @@
                 <i class="fa-solid fa-bars"></i>
             </button>
         </header>
-        <div class="contact-box">
-            <a href="tel:+201210068591" class="contact-item" target="_blank">
-                <i class="fa-solid fa-phone"></i>
-                <div>
-                    <h3>Call </h3>
-                    <p>01210068591</p>
+        <div class="container_contact">
+            <div class="contact-box">
+                <a href="tel:+201210068591" class="contact-item" target="_blank">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h3>Call </h3>
+                        <p>01210068591</p>
+                    </div>
+                </a>
+                <a href="mailto:s24515131eg@std.aou.edu.eg" class="contact-item" target="_blank">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h3>Email </h3>
+                        <p>s24515131eg@std.aou.edu.eg</p>
+                    </div>
+                </a>
+                <a href="https://wa.me/201210068591" class="contact-item" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <div>
+                        <h3>Quick chat </h3>
+                        <p>01210068591</p>
+                    </div>
+                </a>
+            </div>
+            <form class="contact-form" action="https://formspree.io/f/xgonondp" method="POST">
+
+                <h2>Send Me a Message</h2>
+
+                <div class="form-group">
+                    <input type="email" name="email" required>
+                    <label>Email</label>
                 </div>
-            </a>
-            <a href="mailto:s24515131eg@std.aou.edu.eg" class="contact-item" target="_blank">
-                <i class="fa-solid fa-envelope"></i>
-                <div>
-                    <h3>Email </h3>
-                    <p>s24515131eg@std.aou.edu.eg</p>
+
+                <div class="form-group">
+                    <textarea name="message" rows="5" required></textarea>
+                    <label>Message</label>
                 </div>
-            </a>
-            <a href="https://wa.me/201210068591" class="contact-item" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i>
-                <div>
-                    <h3>Quick chat </h3>
-                    <p>01210068591</p>
-                </div>
-            </a>
+
+                <button type="submit">Send Message</button>
+
+            </form>
         </div>
         <button id="home" class="back-home-btn">
             <i class="bi bi-house"></i>
