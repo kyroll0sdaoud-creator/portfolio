@@ -1624,6 +1624,7 @@ ul {
 .contact-form textarea {
     min-height: 140px;
     resize: none;
+    overflow: hidden;
 }
 
 .form-group input,
@@ -1672,3 +1673,6 @@ ul {
         text-align: center;
     }
 }
+
+
+

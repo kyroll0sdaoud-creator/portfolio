@@ -140,3 +140,11 @@ document.querySelectorAll('.overlay-links a').forEach(link => {
 
 
 
+const textareas = document.querySelectorAll('.massege-input');
+
+textareas.forEach(textarea => {
+    textarea.addEventListener('input', function() {
+        this.style.height = 'auto'; 
+        this.style.height = (this.scrollHeight) + 'px'; 
+    });
+});
